@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>💥给你的专属烟花🎆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <link rel="shortcut icon" type="image/png"
+        href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon-v2.png">
+    <link rel="icon" type="image/png"
+        href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon-v2.png">
+    <link rel="apple-touch-icon-precomposed"
+        href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon-v2.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-TileImage"
+        content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon-v2.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .canvas-container {
+            /* background-image: url("https://up.tt98.com/edpic/c7/ce/c4/c7cec402d263306f4f7b5969ee981549.jpg"); */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script src="./js/jquery.min.js"
+        type="text/javascript"></script>
+    <script>
+        var shouci = true;
+        console.log(shouci);
+        function bodyPlayMusic() {
+            if (shouci) {
+                shouci = false;
+                audio.play();
+                console.log(shouci);
+            }
+        };
+
+    </script>
+</head>
+
+<body>
+
+    <!-- clickMusic() -->
+    <img id="music_ico" onclick="" alt="" style=" display: inline; float: right;  ">
+
+    <audio id="audioDom" src="https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/7170534431801838367.mp3" preload="auto"
+        loop="loop"></audio>
+
+    <div id="yhBtn"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:999;display:flex;flex-direction:column;justify-content:center;align-items:center;color:#fff ; font-size:15px">
+        <p>💥点爆</p>
+        <img style="width:64px;margin-bottom:24px "
+            src="https://p9.toutiaoimg.com/img/tos-cn-i-qvj2lq49k0/060990dac854444ab7a927b5b3311fe4~tplv-tt-shrink:640:0.image">
+
+    </div>
+
+    <!-- App -->
+    <div class="container">
+        <div class="loading-init">
+            <div class="loading-init__header"></div>
+            <div class="loading-init__status"></div>
+        </div>
+        <div class="stage-container remove">
+            <div class="page_two hide">
+                <div class="type_words" id="contents"></div>
+            </div>
+            <div class="canvas-container">
+                <canvas id="trails-canvas"></canvas>
+                <canvas id="main-canvas"></canvas>
+                <canvas id="snow-canvas" style="opacity: 0.5;"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- partial -->
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script type="text/javascript">
+
+        function musicPlay(isPlay) {
+            var media = document.querySelector('#audioDom');
+            if (isPlay && media.paused) {
+                media.play();
+            }
+            if (!isPlay && !media.paused) {
+                media.pause();
+            }
+        }
+        function musicInBrowserHandler() {
+            setTimeout(function () {
+                musicPlay(true)
+            }, 0)
+        }
+        document.body.addEventListener('touchstart', musicInBrowserHandler);
+        document.body.addEventListener('click', musicInBrowserHandler);
+
+        $('#yhBtn').click(e => {
+            $('#yhBtn').hide()
+            setTimeout(() => {
+                start()
+                fireworks();
+            }, 3800) // 这里的5000 是5s指烟花延时时间
+            setTimeout(() => {
+                function audioAutoPlay() {
+                    var audio = document.getElementById('audioDom');
+                    audio.play();
+                }
+                audioAutoPlay();
+                // wishFun(); 想要展示祝福语--取消注释
+            }, 2000) // 这里的5000 是5s指音乐延时时间
+            console.log(updateConfig({ autoLaunch: true }));
+        })
+        function fireworks() {
+            $('.page_two').removeClass('hide');
+        }
+        function start() {
+
+            var text = [
+                'ʸᵒᵘ ᵃʳᵉ ᵗʰᵉ ᵒⁿˡʸ ᵇᵉˢᵗ ᶠᵒʳ ᵐᵉ.',
+                "于我而言，你是最好且是唯一❤️",
+                "新年快乐🎆"
+            ]
+            var str = text.join('<br><br>')
+            var str_ = ''
+            var i = 0
+            var content = document.getElementById('contents')
+            var timer = setInterval(() => {
+                if (str_.length < str.length) {
+                    str_ += str[i++]
+                    content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1;color: red;">❤</span></p>'                        //打印时加光标
+                } else {
+                    clearInterval(timer)
+                    content.innerHTML = '<p>' + str_ + '</p>'
+                }
+            }, 100)
+        }
+    </script>
+    <script type="text/javascript" src="./js/snow.js"></script>
+</body>
+
+</html>
