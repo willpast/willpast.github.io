@@ -22,6 +22,7 @@
     <style>
         .canvas-container {
             /* background-image: url("https://up.tt98.com/edpic/c7/ce/c4/c7cec402d263306f4f7b5969ee981549.jpg"); */
+/*            background-image: url("./img/jbb1.png");*/
             background-size: cover;
             background-position: center;
         }
@@ -122,7 +123,7 @@
             var text = [
                 'ʸᵒᵘ ᵃʳᵉ ᵗʰᵉ ᵒⁿˡʸ ᵇᵉˢᵗ ᶠᵒʳ ᵐᵉ.',
                 "于我而言，你是最好且是唯一❤️",
-                "新年快乐🎆"
+                "宝贝，烟花因你而璀璨🎆"
             ]
             var str = text.join('<br><br>')
             var str_ = ''
@@ -131,7 +132,7 @@
             var timer = setInterval(() => {
                 if (str_.length < str.length) {
                     str_ += str[i++]
-                    content.innerHTML = '<p>' + str_ + '<span class="xx" style="opacity: 1;color: red;">❤</span></p>'                        //打印时加光标
+                    content.innerHTML = '<p style="font-size: 20px;" >' + str_ + '<span class="xx" style="opacity: 1;color: red;">❤</span></p>'                        //打印时加光标
                 } else {
                     clearInterval(timer)
                     content.innerHTML = '<p>' + str_ + '</p>'
