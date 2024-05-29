@@ -118,8 +118,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	      items: [
 	        { text: '基础技能',
 	          items: [
-	            { text: '【数据结构】', link: '/base/struct/' },
-	        	  { text: '【常用工具】', link: '/base/tool/' },
+	            { text: '【常用工具】', link: '/base/tool/' },
 	          ]
 	        },
 		      { text: '数据开发',
