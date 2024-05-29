@@ -25,4 +25,4 @@
 ## 许可证
 [MIT](https://github.com/willpast/willpast.github.io/blob/master/LICENSE)
 
-Copyright (c) 2024-present lion
+Copyright (c) 2024-present Cyan
