@@ -38,20 +38,20 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	      items: [
 	        { text: 'Java基础 - 基础知识',
 	          items: [
-              { text: '基础知识 - 导读', link: '/overview/#面向对象与java基础' },
+              { text: '知识体系导读', link: '/overview/#面向对象与java基础' },
 	            { text: '面向对象', link: '/pages/java-basic-oop/' },
 	        	  { text: '知识点', link: '/pages/java-basic-lan-basic/' },
 	          ]
 	        },
 		      { text: 'Java进阶 - 集合框架',
             items: [
-              { text: '集合框架 - 导读', link: '/overview/#java进阶-集合框架' },
+              { text: '知识体系导读', link: '/overview/#java进阶-集合框架' },
               { text: 'Collection - 类关系图', link: '/pages/java-collection-overview/' },
             ]
 		      },
 		      { text: 'Java进阶 - 并发框架',
             items: [
-              { text: '并发框架 - 导读', link: '/pages/java-thread-x-overview/' },
+              { text: '知识体系导读', link: '/pages/java-thread-x-overview/' },
               { text: 'Java 并发 - 理论基础', link: '/pages/java-thread-x-theorty/' },
               { text: 'Java 并发 - 线程基础', link: '/pages/java-thread-x-thread-basic/' },
               { text: 'JUC - 类汇总', link: '/pages/java-thread-x-juc-overview/' },
@@ -60,7 +60,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 		      },
           { text: 'Java进阶 - IO框架',
             items: [
-              { text: 'IO框架 - 导读', link: '/pages/java-io-overview/' },
+              { text: '知识体系导读', link: '/pages/java-io-overview/' },
               { text: 'IO 基础', link: '/pages/java-io-basic-usage/' },
               { text: 'BIO 基础', link: '/pages/java-io-bio/' },
               { text: 'NIO 基础', link: '/pages/java-io-nio/' },
@@ -70,7 +70,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 		      },
           { text: 'Java进阶 - JVM相关',
             items: [
-              { text: 'JVM相关 - 导读', link: '/pages/java-jvm-overview/' },
+              { text: '知识体系导读', link: '/pages/java-jvm-overview/' },
               { text: 'Java 类字节码', link: '/pages/java-jvm-class/' },
               { text: 'JVM 内存模型', link: '/pages/java-jvm-jmm/' },
               { text: 'JVM 垃圾回收', link: '/pages/java-jvm-gc/' },
@@ -79,10 +79,10 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 		      },
           { text: 'Java进阶 - 新版本特性',
             items: [
-              { text: 'java 8 新特性 - 导读', link: '/pages/java8-overview/' },
-              { text: 'Java 8+ 特性 - 导读', link: '/pages/java8+-overview/' },            
-              { text: 'Java 8 升Java 11 重要特性 - 必读', link: '/pages/java9-11/' },
-              { text: 'Java 11 升Java 17 重要特性 - 必读', link: '/pages/java12-17/' },                           
+              { text: 'java 8 新特性知识体系导读', link: '/pages/java8-overview/' },
+              { text: 'Java 8+ 特性知识体系导读', link: '/pages/java8+-overview/' },            
+              { text: 'Java 8 升Java 11 重要特性必读', link: '/pages/java9-11/' },
+              { text: 'Java 11 升Java 17 重要特性必读', link: '/pages/java12-17/' },                           
             ]
 		      },          
 	      ],
@@ -93,15 +93,15 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
         items: [
           { text: '基础算法', 
             items: [
-              {text: '数据结构基础 - 导读', link: '/pages/alg-basic-overview/'},
-              {text: '数据结构进阶 - 导读', link: '/pages/ef847c/'},
-              {text: '常见排序算法 - 导读', link: '/pages/alg-sort-overview/'},
-              {text: '算法思想 - 导读', link: '/pages/alg-core-overview/'},                        
+              {text: '数据结构基础导读', link: '/pages/alg-basic-overview/'},
+              {text: '数据结构进阶导读', link: '/pages/ef847c/'},
+              {text: '常见排序算法导读', link: '/pages/alg-sort-overview/'},
+              {text: '算法思想导读', link: '/pages/alg-core-overview/'},                        
             ]
 		      },
           { text: '领域算法', 
             items: [
-              { text: '领域算法 - 导读', link: '/pages/alg-domain-overview/'},
+              { text: '领域算法导读', link: '/pages/alg-domain-overview/'},
               { text: '安全算法', link: '/pages/alg-domain-security-degist/'},
               { text: '字符串匹配算法', link: '/pages/alg-domain-char-match-overview/' },
               { text: '大数据处理算法', link: '/pages/alg-domain-bigdata-overview/'},
@@ -111,29 +111,6 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 		      },
 
         ],
-	    },
-      {
-	      text: '数据库',
-	      link: '/db/',
-	      items: [
-	        { text: '数据库基础与原理',
-	          items: [
-	            { text: '数据库基础和SQL - 导读', link: '/pages/db-sql-overview/' },
-	          ]
-	        },
-		      { text: 'SQL 数据库 ',
-            items: [
-              { text: 'MySQL - 导读', link: '/pages/db-mysql-overview/' },
-            ]
-		      },
-		      { text: 'NoSQL 数据库',
-            items: [
-              { text: 'Redis - 导读', link: '/pages/db-redis-overview/' },
-              { text: 'MongoDB - 导读', link: '/pages/db-mongo-overview/' },
-              { text: 'ElasticSearch - 导读', link: '/pages/db-es-overview/' },
-            ]
-		      }
-	      ],
 	    },
 	    {
 	      text: '技术',
