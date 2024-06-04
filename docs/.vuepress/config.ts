@@ -135,22 +135,41 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 		      }
 	      ],
 	    },
+      {
+		    text: '系统开发',
+		    link: '/sysdev/',
+		    items: [
+		      { text: '常用类库 - 导读', link: '/pages/dev-package-overview/' },
+          { text: '代码质量 - 导读', link: '/pages/dev-qt-overview/' },
+          { text: '网络协议 - 导读', link: '/pages/dev-protocol-overview/' },
+          { text: '开发安全 - 导读', link: '/pages/dev-security-overview/' },
+          { text: '常用技巧 - 正则表达式', link: '/pages/dev-regex-usage/' },
+		    ], 
+	    },
+      {
+		    text: '数据开发',
+		    link: '/datadev/',
+		    items: [
+		      { text: '数据开发', link: '/datadev/' },
+		    ], 
+	    },
 	    {
-	      text: '技术',
+	      text: '工具箱',
 	      link: '/technology/',
 	      items: [
-	        { text: '基础技能',
+	        { text: '开发工具',
 	          items: [
-	            { text: '【常用工具】', link: '/base/tool/' },
+	            { text: '在线ASCII码表', link: 'https://www.fly63.com/tool/ascii/' },
 	          ]
 	        },
-		      { text: '数据开发',
+		      { text: '创作工具',
             items: [
-              { text: '数据采集', link: '/data/collect/' },
-              { text: '数据传输', link: '/data/transmit/' },
-              { text: '数据存储', link: '/data/storage/' },
-              { text: '数据处理', link: '/data/process/' },
-              { text: '数据治理', link: '/data/govern/' },
+              { text: '在线画图工具', link: 'https://www.processon.com/' },
+            ]
+		      },
+          { text: '在线技术文档',
+            items: [
+              { text: 'Nginx中文文档', link: 'https://blog.redis.com.cn/doc/index.html' },
             ]
 		      }
 	      ],
