@@ -8,11 +8,11 @@ actionLink: /overview/
 # bannerBg: auto # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 
 features: # 可选的
-  - title: 技术
-    details: 基础技能、系统开发、数据开发等涉及的技术文档、技巧、总结
-    link: /technology/
+  - title: 技术导读
+    details: 全栈知识体系，包含基础技能、开发、架构、方法论等总结
+    link: /overview/
     imgUrl: /img/web.png
-  - title: 项目
+  - title: 项目实践
     details: 他山之玉，可以攻石。学习他人项目并实战的过程记录
     link: /project/
     imgUrl: /img/other.png

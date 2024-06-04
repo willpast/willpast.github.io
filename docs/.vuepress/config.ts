@@ -114,7 +114,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	    },
       {
 	      text: '数据库',
-	      link: '/db/',
+	      link: '/database/',
 	      items: [
 	        { text: '数据库基础与原理',
 	          items: [
@@ -155,7 +155,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	    },
 	    {
 	      text: '工具箱',
-	      link: '/technology/',
+	      link: '/tools/',
 	      items: [
 	        { text: '开发工具',
 	          items: [
