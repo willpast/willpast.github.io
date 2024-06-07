@@ -146,17 +146,44 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '常用技巧 - 正则表达式', link: '/pages/dev-regex-usage/' },
 		    ], 
 	    },
+      // {
+		  //   text: '数据开发',
+		  //   link: '/datadev/',
+		  //   items: [
+		  //     { text: 'doing', link: '/datadev/' },
+		  //   ], 
+	    // },
       {
-		    text: '数据开发',
-		    link: '/datadev/',
+		    text: '架构',
+		    link: '/architecture/',
 		    items: [
-		      { text: '数据开发', link: '/datadev/' },
+		      { text: '架构基础 导读', link: '/pages/arch-overview/' },
+          { text: '分布式系统 导读', link: '/pages/arch-d-overview/' },
+          { text: '微服务系统 导读', link: '/pages/arch-m-overview/' },
+		    ], 
+	    },
+      {
+		    text: '方法论',
+		    link: '/theory/',
+		    items: [
+		      { text: '开发理论 导读', link: '/pages/dev-th-overview/' },
+          { text: '开源协议 导读', link: '/pages/dev-open-overview/' },
+          { text: '代码规范 导读', link: '/pages/dev-code-style-overview/' },
+          { text: '开发流程 导读', link: '/pages/dev-agile-overview/' },
+          { text: '设计模式 导读', link: '/pages/dev-pattern-overview/' },
+          { text: '系统认证 导读', link: '/pages/dev-cart-overview/' },
 		    ], 
 	    },
 	    {
 	      text: '工具箱',
-	      link: '/tools/',
+	      link: '/tool/',
 	      items: [
+          { text: '百宝箱',
+          items: [
+            { text: '开发百宝箱', link: '/pages/tool-resource/' },
+          ]
+          },
+          
 	        { text: '开发工具',
 	          items: [
 	            { text: '在线ASCII码表', link: 'https://www.fly63.com/tool/ascii/' },
