@@ -180,25 +180,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	      items: [
           { text: '百宝箱',
           items: [
-            { text: '开发百宝箱', link: '/pages/tool-resource/' },
+            { text: '百宝箱', link: '/pages/tool-resource/' },
           ]
           },
-          
-	        { text: '开发工具',
-	          items: [
-	            { text: '在线ASCII码表', link: 'https://www.fly63.com/tool/ascii/' },
-	          ]
-	        },
-		      { text: '创作工具',
+          { text: '官方文档',
             items: [
-              { text: '在线画图工具', link: 'https://www.processon.com/' },
+              { text: '官方文档', link: '/pages/tool-tech-doc/' },
             ]
 		      },
-          { text: '在线技术文档',
-            items: [
-              { text: 'Nginx中文文档', link: 'https://blog.redis.com.cn/doc/index.html' },
-            ]
-		      }
+	        { text: '常用开发工具',
+	          items: [
+              
+	            { text: 'Git', link: '/pages/tool-git/' },
+              { text: 'Markdown', link: '/pages/tool-markdown/' },              
+	          ]
+	        },
+          { text: '前端开发工具',
+	          items: [
+              { text: '常用前端工具', link: '/pages/tool-fe-com/' },
+	            { text: 'npm', link: '/pages/tool-npm/' },
+              { text: 'yaml', link: '/pages/tool-yaml/' },
+	          ]
+	        },
 	      ],
 	    },
 	    {
