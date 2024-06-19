@@ -137,7 +137,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	    },
       {
 		    text: '系统开发',
-		    link: '/sysdev/',
+		    link: '/devsys/',
 		    items: [
 		      { text: '常用类库 - 导读', link: '/pages/dev-package-overview/' },
           { text: '代码质量 - 导读', link: '/pages/dev-qt-overview/' },
@@ -145,14 +145,14 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
           { text: '开发安全 - 导读', link: '/pages/dev-security-overview/' },
           { text: '常用技巧 - 正则表达式', link: '/pages/dev-regex-usage/' },
 		    ], 
+	    },      
+      {
+		    text: '数据开发',
+		    link: '/devdata/',
+		    items: [
+		      { text: '数据资产化及入表', link: '/pages/6de9b5/' },
+		    ], 
 	    },
-      // {
-		  //   text: '数据开发',
-		  //   link: '/datadev/',
-		  //   items: [
-		  //     { text: 'doing', link: '/datadev/' },
-		  //   ], 
-	    // },
       {
 		    text: '架构',
 		    link: '/architecture/',
@@ -176,7 +176,7 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
 	    },
 	    {
 	      text: '工具箱',
-	      link: '/tool/',
+	      link: '/tools/',
 	      items: [
           { text: '百宝箱',
           items: [
