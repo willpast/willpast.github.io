@@ -358,6 +358,28 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
       // 说明：成功获取一次访问量，访问量 + 1，所以第一次获取失败后，设置的每个隔段重新获取时间，将会影响访问量的次数。如 100 可能每次获取访问量 + 3
     },
 
+    // 私密文章配置
+    privatePage: {
+      openPrivate: true, // 开启私密文章验证，默认开启（true），如果不开启（false），则下面配置都失效
+      username: "cyan", // 管理员用户名
+      password: "123456", // 管理员密码
+      expire: "1h", // 登录过期时间：1d 代表 1 天，1h 代表 1 小时，仅支持这两个单位，不加单位代表秒。过期后访问私密文章重新输入用户名和密码。默认一天
+      loginPath: "/private/login/", // 引用登录组件的 md 文章的 permalink（必须），无默认值
+      loginKey: "vdoing_manager", // 存储用户名信息的 key，默认是 vdoing_manager。系统通过该 key 验证是否登录、是否过期
+      loginSession: true, // 开启是否在网页关闭或刷新后，清除登录状态，这样再次访问网页，需要重新登录，默认为 false（不开启）
+      firstLogin: 0, // 第一次进入网站需要验证。用于封锁整个网站，默认为 0（不开启），1 和 2 都代表开启，区别：1 代表虽然进入网站成功，但是网站内的私密文章仍需要单独验证，2 代表进入网站成功，网站内的私密文章不需要单独验证，也就是网站内的私密文章和普通文章一样可以访问
+      firstLoginKey: "vdoing_first_login", // 存储用户名信息的 key，firstLogin 开启后该配置生效，默认为 vdoing_first_login，系统通过该 key 验证是否登录、是否过期
+      // 私密文章多组用户名密码
+      loginInfo: {
+        // "/pages/612ae6/": [
+        //   { username: "cyan", password: "123456" },
+        // ],
+        "vdoing_first_login" :[  // 对应 firstLoginKey 的值
+          { username: "cyan1", password: "123456" },
+        ]
+      }
+    }, 
+
   },
 
   // 注入到页面<head>中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
@@ -384,8 +406,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css' }],      // 让md支持数学公式
     ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css" }],  // 让md支持数学公式
 
-    ['link', { rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_3077305_pt8umhrn4k9.css' }], // 阿里在线矢量图
+    
+    ['link', { rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_3114978_qe0b39no76.css' }], // 阿里在线图标
+    // ['link', { rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_3129839_xft6cqs5gc.css' }], // 阿里在线图标
+    // ['link', { rel: 'stylesheet', href: 'https://at.alicdn.com/t/font_3077305_pt8umhrn4k9.css' }], // 阿里在线矢量图
+
     ['meta', { name: 'referrer', content: 'no-referrer-when-downgrade' }], // 解决 chrome 网站统计不准确问题
+    ['noscript', {}, '<meta http-equiv="refresh" content="0; url=https://www.youngkbt.cn/noscript/"><style>.theme-vdoing-content { display:none }']
 
   ],
 
@@ -503,11 +530,13 @@ export default defineConfig4CustomTheme<VdoingThemeConfig>({
     [
     	{
         	name: 'custom-plugins',
-        	globalUIComponents: ["PageInfo"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
+        	globalUIComponents: ["PageInfo", "BlockToggle"] // 2.x 版本 globalUIComponents 改名为 clientAppRootComponentFiles
     	}
     ],
-  ], 
+    ['tabs'],
 
+  ], 
+  
   markdown: {
     lineNumbers: true,
     extractHeaders: ['h2', 'h3', 'h4', 'h5', 'h6'], // 提取标题到侧边栏的级别，默认['h2', 'h3']
